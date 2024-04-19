@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:hint="정수를 입력해주세요"
+        android:inputType="number"
+        android:maxLength="7"
+        android:maxLines="1"
+        android:textColorHint="@color/purple"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".3" />
+
+    <TextView
+        android:id="@+id/outputTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="end"
+        android:textSize="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputEditText"
+        app:layout_constraintStart_toStartOf="@+id/inputEditText"
+        app:layout_constraintTop_toBottomOf="@+id/inputEditText" />
+
+    <TextView
+        android:id="@+id/inputUnitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="cm"
+        android:textSize="30dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@+id/inputEditText"
+        app:layout_constraintBaseline_toBaselineOf="@id/inputEditText"/>
+
+    <TextView
+        android:id="@+id/outputUnitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:textSize="30sp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@+id/outputTextView"
+        app:layout_constraintBaseline_toBaselineOf="@id/outputTextView"/>
+
+    <ImageView
+        android:id="@+id/swapImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_swap_vert_24"
+        app:layout_constraintBottom_toTopOf="@+id/outputUnitTextView"
+        app:layout_constraintStart_toStartOf="@+id/inputUnitTextView"
+        app:layout_constraintTop_toBottomOf="@+id/inputUnitTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
